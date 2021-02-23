@@ -1,0 +1,610 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>A10 Logística e Transportes</title>
+
+<link rel="icon" href="   favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="   favicon.ico" type="image/x-icon">
+
+<link rel="favicon" href="favicon.ico" type="image/x-icon">
+
+<link rel="apple-touch-icon" href="   favicon.ico" type="image/x-icon">
+
+
+<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+$(document).ready(function () {	
+	
+	$('#nav li').hover(
+		function () {
+			//show its submenu
+			$('ul', this).stop().slideDown(100);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).stop().slideUp(100);			
+		}
+	);
+	
+});
+	</script>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Tips & Tricks: How to create animated tooltips with CSS3" />
+        <meta name="keywords" content="tooltips, css3, hover, pseudo-element, pseudo-class, animated, transition" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="   css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="   css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+
+<link rel="stylesheet" href="   style_menu.css" type="text/css" />
+<script type="text/javascript" src="   script.js"></script>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+<script type='text/javascript' src='   nivo.slider.pack.js'></script>
+<script type="text/javascript">
+$(window).load(function() {
+	setTimeout(function(){
+	$('#slider').nivoslider({
+		effect:'random', //Specify sets like: 'fold,fade,sliceDown'
+		slices:15,
+		animSpeed:400, //Slide transition speed
+		pauseTime:3000,
+		startSlide:0, //Set starting Slide (0 index)
+		directionNav:true, //Next & Prev
+		directionNavHide:true, //Only show on hover
+		controlNav:true, //1,2,3...
+		controlNavThumbs:true, //Use thumbnails for Control Nav
+      controlNavThumbsFromRel:false, //Use image rel for thumbs
+		controlNavThumbsSearch: '.jpg', //Replace this with...
+		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+		keyboardNav:true, //Use left & right arrows
+		pauseOnHover:false, //Stop animation while hovering
+		manualAdvance:false, //Force manual transitions
+		captionOpacity:0.8, //Universal caption opacity
+		beforeChange: function(){},
+		afterChange: function(){},
+		slideshowEnd: function(){} //Triggers after all slides have been shown
+	});
+	}, 1000);
+});
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+
+
+<style>
+#pcm{display:none;}
+ul.pureCssMenu ul{display:none}
+ul.pureCssMenu li:hover>ul{display:block}
+ul.pureCssMenu ul{position: absolute;left:-1px;top:98%;}
+ul.pureCssMenu ul ul{position: absolute;left:98%;top:-2px;}
+ul.pureCssMenu,ul.pureCssMenu ul {
+	margin:0px;
+	list-style:none;
+	padding:0px 1px 1px 0px;
+	background-color:#FAFAFA;
+	background-repeat:repeat;
+	border-color:#A6A6A6;
+	border-width:0px;
+	border-style:solid;
+	z-index:9000; 
+}
+ul.pureCssMenu table {border-collapse:collapse}ul.pureCssMenu {
+	display:block;
+	zoom:1;
+	float: left;
+	z-index:9000; 
+}
+ul.pureCssMenu ul{
+	width:267.75px;
+	z-index:9000; 
+}
+ul.pureCssMenu li{
+	display:block;
+	margin:1px 0px 0px 1px;
+	font-size:0px;
+	z-index:9000; 
+}
+ul.pureCssMenu a:active, ul.pureCssMenu a:focus {
+outline-style:none;
+z-index:9000; 
+}
+ul.pureCssMenu a, ul.pureCssMenu li.dis a:hover, ul.pureCssMenu li.sep a:hover {
+	display:block;
+	vertical-align:middle;
+	background-color:#FAFAFA;
+	border-width:0px;
+	border-color:#cacaff;
+	border-style:solid;
+	text-align:left;
+	text-decoration:none;
+	padding:5px;
+	_padding-left:0;
+	font:13px Arial;
+	color: #000000;
+	text-decoration:none;
+	cursor:pointer;
+	z-index:9000; 
+}
+ul.pureCssMenu span{
+	overflow:hidden;
+}
+ul.pureCssMenu li {
+	float:left;
+}
+ul.pureCssMenu ul li {
+	float:none;
+	z-index:9000; 
+}
+ul.pureCssMenu ul a {
+	text-align:left;
+	white-space:nowrap;
+}
+ul.pureCssMenu li.sep{
+	text-align:left;
+	padding:0px;
+	line-height:0;
+	height:100%;
+}
+ul.pureCssMenu li.sep span{
+	float:none;	padding-right:0;
+	width:3;
+	height:100%;
+	display:inline-block;
+	background-color:#A6A6A6;	background-image:none;}
+ul.pureCssMenu ul li.sep span{
+	width:100%;
+	height:3;
+}
+ul.pureCssMenu li:hover{
+	position:relative;
+	z-index:9000; 
+}
+ul.pureCssMenu li:hover>a{
+	background-color:#00008B;
+	border-color:#4C99AB;
+	border-style:solid;
+	font:13px Arial;
+	color: #FFFFFF;
+	text-decoration:none;
+	z-index:9000; 
+}
+ul.pureCssMenu li a:hover{
+	position:relative;
+	background-color:#00008B;
+	border-color:#4C99AB;
+	border-style:solid;
+	font:13px Arial;
+	color: #FFFFFF;
+	text-decoration:none;
+	z-index:9000; 
+}
+ul.pureCssMenu li.dis a {
+	color: #AAAAAA !important;
+}
+ul.pureCssMenu img {border: none;float:left;_float:none;margin-right:5px;width:16px;
+height:16px;
+}
+ul.pureCssMenu ul img {width:16px;
+height:16px;
+}
+ul.pureCssMenu img.over{display:none}
+ul.pureCssMenu li.dis a:hover img.over{display:none !important}
+ul.pureCssMenu li.dis a:hover img.def {display:inline !important}
+ul.pureCssMenu li:hover > a img.def  {display:none}
+ul.pureCssMenu li:hover > a img.over {display:inline}
+ul.pureCssMenu a:hover img.over,ul.pureCssMenu a:hover ul img.def,ul.pureCssMenu a:hover a:hover img.over{display:inline}
+ul.pureCssMenu a:hover img.def,ul.pureCssMenu a:hover ul img.over,ul.pureCssMenu a:hover a:hover img.def{display:none}
+ul.pureCssMenu a:hover ul{display:block}
+ul.pureCssMenu span{
+	display:block;
+	background-image:url(  images/arrv_blue_2.gif);
+	background-position:right center;
+	background-repeat: no-repeat;
+   padding-right:8px;}
+ul.pureCssMenu li:hover>a>span{	background-image:url(  images/arrv_white_2.gif);
+}
+ul.pureCssMenu a:hover span{	_background-image:url(  images/arrv_white_2.gif)}
+ul.pureCssMenu ul span,ul.pureCssMenu a:hover table span{background-image:url(  images/arr_blue_2.gif)}
+ul.pureCssMenu ul li:hover > a span{	background-image:url(  images/arr_white_2.gif);}
+ul.pureCssMenu table a:hover span{background-image:url(  images/arr_white_2.gif)}
+ul.pureCssMenu li a.pureCssMenui0{
+font:n;
+}
+ul.pureCssMenu li a.pureCssMenui0:hover{
+font:o;
+}
+</style>
+
+
+<link href="   style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+a:active {
+	text-decoration: none;
+}
+body,td,th {
+	font-size: 14px;
+	color: #000;
+}
+ul.pureCssMenu1 {	margin:0px;
+	list-style:none;
+	padding:0px 1px 1px 0px;
+	background-color:#FAFAFA;
+	background-repeat:repeat;
+	border-color:#A6A6A6;
+	border-width:0px;
+	border-style:solid;
+	z-index:9000; 
+}
+ul.pureCssMenu1 {	display:block;
+	zoom:1;
+	float: left;
+	z-index:9000; 
+}
+</style>
+
+
+</head>
+<body background="img\Fundo.png">
+
+<table width="864" border="0" align="center">
+  <tr>
+    <td width="858" height="83"><table width="866" border="0" align="center">
+      <tr>
+        <td width="203"><table width="200" border="0">
+          <tr>
+            <td><a href="index.htm"><img src="img\A10 LOG.PNG" width="200" height="110" border="0" /></a></td>
+          </tr>
+        </table></td>
+        <td width="653"><table width="621" border="0" align="right">
+          <tr>
+            <td width="615"><table width="472" border="0" align="right">
+              <tr>
+                <td width="466"><ul class="pureCssMenu pureCssMenum">
+                  <li class="pureCssMenui0"><a class="pureCssMenui0" href="index.htm" title="Home">HOME</a></li>
+                  <li class="pureCssMenui0"><a class="pureCssMenui0" href="#" title="Empresa"><span>EMPRESA</span>
+                    <![if gt IE 6]>
+                    </a>
+                    <![endif]>
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   historico.htm" title="Hist&oacute;rico">HIST&Oacute;RICO</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   norteadores_estrategicos.htm" title="NORTEADORES ESTRAT&Eacute;GICOS">NORTEADORES ESTRAT&Eacute;GICOS</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   estrutura.htm" title="ESTRUTURA">ESTRUTURA</a></li>					  
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   segmentos_de_atuacao.htm">SEGMENTOS DE ATUA&Ccedil;&Atilde;O</a></li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                  </li>
+                  <li class="pureCssMenui0"><a class="pureCssMenui0" href="#" title="SERVI&Ccedil;OS"><span>SERVI&Ccedil;OS</span>
+                    <![if gt IE 6]>
+                    </a>
+                    <![endif]>
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   cidades_atendidas.htm" title="CIDADES ATENDIDAS">CIDADES ATENDIDAS</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   servicos_online.htm" title="SERVI&Ccedil;OS ONLINE">SERVI&Ccedil;OS ONLINE</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   orcamento.htm" title="COTA&Ccedil;&Atilde;O ONLINE">COTA&Ccedil;&Atilde;O ONLINE</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   Documentos.htm" title="DOCUMENTOS">DOCUMENTOS</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   coletas_online.htm" title="COLETAS ONLINE">COLETAS ONLINE</a></li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                  </li>
+                  <li class="pureCssMenui0"><a class="pureCssMenui0" href="#" title="ESPA&Ccedil;O DO CLIENTE"><span>ESPA&Ccedil;O DO CLIENTE</span>
+                    <![if gt IE 6]>
+                    </a>
+                    <![endif]>
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   rastreamento.htm" title="RASTREAMENTO">RASTREAMENTO</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   rastreamento_por_remetente.htm" title="RASTREAMENTO POR REMETENTE">RASTREAMENTO POR REMETENTE</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   rastreamento_por_destinatario.htm" title="RASTREAMENTO POR DESTINAT&Aacute;RIO">RASTREAMENTO POR DESTINAT&Aacute;RIO</a></li>
+                      <li class="pureCssMenui"><a class="pureCssMenui" href="   rastreamento_por_pagador.htm" title="RASTREAMENTO POR PAGADOR">RASTREAMENTO POR PAGADOR</a></li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                  </li>
+                  <li class="pureCssMenui0"><a class="pureCssMenui0" href="#" title="CONTATO"><span>CONTATO</span>
+						<![if gt IE 6]>
+						</a>
+						<![endif]>
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+						<ul class="pureCssMenum">
+							<li class="pureCssMenui"><a class="pureCssMenui" href="   unidades.htm" title="UNIDADES">UNIDADES</a></li>
+							<li class="pureCssMenui"><a class="pureCssMenui" href="   contato.htm" title="FALE CONOSCO">FALE CONOSCO</a></li>
+							<li class="pureCssMenui"><a class="pureCssMenui" href="   trabalhe_conosco.htm" title="TRABALHE CONOSCO">TRABALHE CONOSCO</a></li>
+						</ul>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+					</li>
+                </ul></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><table width="181" border="0" align="right">
+              <tr>
+                <td width="24"><img src="img\cel.png" width="24" height="24" /></td>
+                <td width="147"><div align="left">11 3717 0692</div></td>
+              </tr>
+              <tr>
+                <td><img src="img\cel.png" width="24" height="24" /></td>
+                <td><div align="left">11 2436 0405</div></td>
+              </tr>
+              <tr>
+                <td><img src="img\email.png" width="22" height="22" /></td>
+                <td><div align="left"><a href="mailto:a10log@a10log.com.br">a10log@a10log.com.br</a></div></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="368"><table width="827" border="0" align="center" background="   back.png">
+      <tr>
+        <td height="356" valign="top"><table width="803" border="0" align="center">
+          <tr>
+            <td width="797" height="322" valign="top"><div id="slider" class="nivoslider"> <img src="img\walle.jpg" alt="" /><img src="img\up.jpg" alt="" /> <img src="img\monstersinc.jpg" alt="" /> <img src="img\nemo.jpg" alt="" /></div></td>
+          </tr>
+        </table>
+          </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="338"><table width="818" border="0" align="center">
+      <tr>
+        <td width="812" height="332"><table width="815" border="0">
+          <tr>
+            <td width="809"><table width="825" border="0" align="center">
+              <tr>
+                <td width="304"><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Localize sua Carga</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="rastreamento.htm"><img src="img\localize_sua_carga.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Verifique o status da sua entrega.</div></td>
+                  </tr>
+                  </table></td>
+                <td width="258"><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Cidades Atendidas</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="cidades_atendidas.htm"><img src="img\cidades_atendidas.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Verifique as cidades atendidas.</div></td>
+                  </tr>
+                  </table></td>
+                <td width="249"><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Boleto Web</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="   servicos_online.htm"><img src="img\boleto_web.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Emita a segunda via do seu boleto.</div></td>
+                  </tr>
+                  </table></td>
+                </tr>
+              <tr>
+                <td><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Coleta</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="   coletas_online.htm"><img src=" img\coleta.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Fa&ccedil;a a sua coleta online.</div></td>
+                  </tr>
+                </table></td>
+                <td><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Servi&ccedil;os Online</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="   servicos_online.htm"><img src="img\servicos_onlines.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Verifique o DACTE, xml ou fatura.</div></td>
+                  </tr>
+                </table></td>
+                <td><table width="285" border="0">
+                  <tr>
+                    <td width="279"><div align="left"><font size="+2">Contato</font></div></td>
+                  </tr>
+                  <tr>
+                    <td><table width="282" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td width="282"><p align="left"><a href="   contato.htm"><img src="img\contato.jpg" width="275" height="100" border="0" /></a></p></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><div align="left">Entre em contato e tire  suas d&uacute;vidas.</div></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><br />
+              <table width="878" border="0">
+              <tr>
+                <td width="872"><div align="left"><font size="+1">A A10 Log&iacute;stica e Transportes EIRELI - EPP</font></div></td>
+              </tr>
+              <tr>
+                <td><div align="left">A A10 Log, se caracteriza pela gest&atilde;o de transportes inovadora, &aacute;gil e moderna com foco total nas necessidades dos clientes e pronta para os novos desafios do mercado.</div></td>
+              </tr>
+            </table>
+              <br /></td>
+          </tr>
+          <tr>
+            <td height="18"><br />
+              <table width="887" border="0"  bgcolor="#00006C">
+                <tr>
+                  <td width="130"><table width="111" border="0">
+                    <tr>
+                      <td width="105"><a href="index.htm"><img src="img\A10 Log Rodape.png" width="122" height="49" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="83"><table width="125" border="0" align="left">
+                        <tr>
+                          <td width="24"><img src="img\cel.png" width="24" height="24" /></td>
+                          <td width="91"><div align="left"><font  color="#ffffff">11 3717 0692</font></div></td>
+                        </tr>
+                        <tr>
+                          <td><img src="img\cel.png" width="24" height="24" /></td>
+                          <td><font  color="#ffffff">11 2436 0405 </font></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+                  <td width="747"><table width="780" border="0" align="right">
+                    <tr>
+                      <td width="35"><div align="left"><strong><a href="index.html"><font size="+0" color="#FFFFFF">&nbsp;Home&nbsp;&nbsp;&nbsp;</font></a></strong></div></td>
+                      <td width="10" rowspan="6"><img src=" img\filete_rodape.png" width="2" height="125" /></td>
+                      <td width="158"><div align="left"><strong><font size="+0" color="#FFFFFF">Empresa</font></strong></div></td>
+                      <td width="10" rowspan="6"><img src="img\filete_rodape.png" width="2" height="125" /></td>
+                      <td width="156"><div align="left"><strong><font size="+0" color="#FFFFFF">Servi&ccedil;os</font></strong></div></td>
+                      <td width="10" rowspan="6"><img src="img\filete_rodape.png" width="2" height="125" /></td>
+                      <td width="206"><div align="left"><strong><font size="+0" color="#FFFFFF">Espaco do cliente</font></strong></div></td>
+                      <td width="10" rowspan="6"><img src="img\filete_rodape.png" width="2" height="125" /></td>
+                      <td width="147"><div align="left"><strong><font size="+0" color="#FFFFFF">Contato</font></strong></div></td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><div align="left"><a href="historico.htm"><font size="-1" color="#ffffff">Hist&oacute;rico</font></a></div></td>
+                      <td><div align="left"><a href="cidades_atendidas.htm"><font size="-1" color="#ffffff">Cidades atendidas</font></a></div></td>
+                      <td><div align="left"><a href="rastreamento.htm"><font size="-1" color="#ffffff">Rastreamento</font></a></div></td>
+                      <td><div align="left"><a href="unidades.htm"><font size="-1" color="#ffffff">Unidades</font></a></div></td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><div align="left"><a href="norteadores_estrategicos.htm"><font size="-1" color="#ffffff">Norteadores estrat&eacute;gicos</font></a></div></td>
+                      <td><div align="left"><a href="servicos_online.htm"><font size="-1" color="#ffffff">Servi&ccedil;os online</font></a></div></td>
+                      <td><div align="left"><a href="rastreamento_por_remetente.htm"><font size="-1" color="#ffffff">Rastreamento por remetente</font></a></div></td>
+                      <td><div align="left"><a href="contato.htm"><font size="-1" color="#ffffff">Fale Conosco</font></a></div></td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><div align="left"><a href="estrutura.htm"><font size="-1" color="#ffffff">Estrutura</font></a></div></td>
+                      <td><div align="left"><a href="orcamento.htm"><font size="-1" color="#ffffff">Cota&ccedil;&atilde;o Online</font></a></div></td>
+                      <td><div align="left"><a href="   rastreamento_por_destinatario.htm"><font size="-1" color="#ffffff">Rastreamento por destinat&aacute;rio</font></a></div></td>
+                      <td><div align="left"><a href="trabalhe_conosco.htm"><font size="-1" color="#ffffff">Trabalhe conosco</font></a></div></td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td><div align="left"><a href="segmentos_de_atuacao.htm"><font size="-1" color="#ffffff">Segmentos de atua&ccedil;&atilde;o</font></a></div></td>
+                      <td><div align="left"><a href="Documentos.htm"><font size="-1" color="#ffffff">Documentos</font></a></div></td>
+                      <td><div align="left"><a href="rastreamento_por_pagador.htm"><font size="-1" color="#ffffff">Rastreamento por pagador</font></a></div></td>
+                      <td>&nbsp;</td>
+                      </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td><div align="left"><a href="   coletas_online.htm"><font size="-1" color="#ffffff">Coletas Online</font></a></div></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      </tr>
+                  </table></td>
+                  </tr>
+                <tr>
+                  <td colspan="2"><table width="904" border="0" align="center">
+                    <tr>
+                      <td><table width="695" border="0" align="right">
+                        <tr>
+                            <td width="280"><font size="+0" color="#ffffff">Disk Coleta 11 3010 1235</font></td>
+                            <td width="9">&nbsp;</td>
+                            <td width="22"><img src=" img\email.png" width="22" height="22" /></td>
+                            <td width="178"><a href="mailto:a10log@a10log.com.br"><font size="+0" color="#ffffff">a10log@a10log.com.br</font></a></td>
+							<td width="286" align="right"> <a><font color="#FFFFFF"><u>Intranet</u>  </font>  </a></td>
+                            </tr>
+                      </table></td>
+                      </tr>
+                  </table></td>
+                  </tr>
+                <tr>
+                  <td colspan="2"><table width="913" border="0" align="left">
+                    <tr>
+                      <td width="662"><div align="left"><font color="#FFFFFF">R. Jo&atilde;o Pimentel, 99 Glp05 . Jd Nossa Senhora Aparecida .
+                        07177-160 . Guarulhos . SP</font></div></td>
+                      <td width="241"><table width="228" border="0" align="right">
+                        <tr>
+                            <td width="88"><font color="#ffffff"><u>Ethy</u></font></a></td>
+                        </tr>
+                      </table></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
